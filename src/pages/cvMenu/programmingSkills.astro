@@ -1,0 +1,50 @@
+---
+import VerticalWindow from "../../components/VerticalWindow.astro";
+import Layout from "../../layouts/Layout2.astro";
+import Carrousel from "../../components/VerticalCarousel.astro";
+---
+
+<Layout title="Programacion" mainTittle="PROGRAMACION" client:load>
+  <Carrousel>
+    <!-- Card 1 -->
+    <div class="swiper-slide">
+      <VerticalWindow cardTitle="POO" imgPath="../../../public/img/oop.png" cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/> 
+    </div> 
+    
+    <!-- Card 2 -->
+    <div class="swiper-slide">
+      <VerticalWindow cardTitle="DESARROLLO WEB" imgPath="../../../public/img/webDevelopment.png" cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+    </div> 
+
+    <!-- Card 3 -->
+    <div class="swiper-slide">
+      <VerticalWindow cardTitle="IA" imgPath="../../../public/img/ai.png" cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+    </div>  
+
+    <!-- Card 4 -->
+    <div class="swiper-slide">
+      <VerticalWindow cardTitle="ANALISIS DE DATOS" imgPath="../../../public/img/dataAnalysis.png" cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/> 
+    </div> 
+    
+    <!-- Card 5 -->
+    <div class="swiper-slide">
+      <VerticalWindow cardTitle="CONTROL DE VERSIONES" imgPath="../../../public/img/versionControl.png" cardRef="/cvMenu/education" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+    </div> 
+
+    <!-- Card 6 -->
+    <div class="swiper-slide">
+      <VerticalWindow cardTitle="SEGURIDAD" imgPath="../../../public/img/security.png" cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+    </div>     
+  </Carrousel>
+</Layout>
+
+<style>
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+</style>
+
+
+<script src="../../../libs/vertical_swiper.js"></script>

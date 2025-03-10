@@ -1,0 +1,53 @@
+---
+import HorizontalWindow from "../../components/HorizontalWindow.astro";
+import Layout from "../../layouts/Layout2.astro";
+import Carrousel from "../../components/HorizontalCarrousel.astro";
+---
+
+<Layout title="Educacion" mainTittle="EDUCACION" client:load>
+  <Carrousel>
+    <!-- Card 1 -->
+    <div class="swiper-slide">
+      <HorizontalWindow cardTitle="Ingenieria Informatica"   
+      cardParagraph={[
+        "-Grado Universitario",
+        "-ETSII (Universidad de Sevilla)",
+        "-2021 - Actualidad"
+      ]} imgPath="../../../public/img/etsii_building.jpg"/>  
+    </div> 
+    
+    <!-- Card 2 -->
+    <div class="swiper-slide">
+      <HorizontalWindow cardTitle="Ciencias de la Salud"   
+      cardParagraph={[
+        "-Bachillerato",
+        "-Salesianos de Triana",
+        "-2019 - 2021"
+      ]} imgPath="../../../public/img/salesianos_building.jpg"/>
+    </div> 
+
+    <!-- Card 3 -->
+    <div class="swiper-slide">
+      <HorizontalWindow cardTitle="Primaria y ESO"   
+      cardParagraph={[
+        "-Educacion Obligatoria",
+        "-Salesianos de Triana",
+        "-2011 - 2019"
+      ]} imgPath="../../../public/img/salesianos_building.jpg"/>   
+    </div>  
+  </Carrousel>
+
+
+
+</Layout>
+
+<style>
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+</style>
+
+
+<script src="../../../libs/horizontal_swiper.js"></script>

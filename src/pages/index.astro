@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NetBar from '../components/NetBar.astro';
+import PorfileImage from '../components/PorfileImage.astro';
+import Title from '../components/Title.astro';
+import NormalText from '../components/NormalText.astro';
+import IconImg from '../components/IconImg.astro';
+---
+<Layout title="Mi Curriculum" client:load>
+  <!--PORFILE IMAGE-->
+  <div class="grid justify-self-center row-start-2 row-span-4 rounded-lg relative">
+    <div class="size-52 flex justify-center items-start bottom-0 top-0">
+    <PorfileImage/>
+    </div>
+  </div>
+  
+  <div class="grid grid-rows-subgrid gap-0 row-start-6 row-span-4 items-center">
+    <!--PABLO VELAZQUEZ-->
+    <div class="flex justify-center items-center row-start-1 row-span-1 pt-24 sm:pt-28 3xl:pt-6">
+    <Title title='PABLO VELAZQUEZ'/>
+    </div>
+
+    <!--PARAGRAPH-->
+    <div class="flex justify-center items-center row-start-2 row-span-1 pt-40 sm:pt-40 3xl:pt-14">
+    <NormalText>
+      Soy un estudiante de Ingenieria Informatica.<br/>
+      Con muchas ganas de Aprender y Trabajar.<br/>
+      Desarrollo Web, Inteligencia Artificial y Analisis de Datos...
+    </NormalText>
+    </div>
+    <!--NETBAR-->
+    <div class="flex justify-center items-center row-start-3 row-span-1 pt-52 sm:pt-48 3xl:pt-20">
+    <NetBar/>
+    </div>
+  </div>
+
+  <!--ARROW ICON-->
+  <div class="flex justify-center items-center row-start-11 row-span-1 pt-1 sm:pt-0 sm:pb-4">
+    <IconImg linkRef='/about', size="size-14", iconPath="../../public/icons/caret-down.svg", alt="arrowIcon"></IconImg>
+  </div>
+  
+</Layout>

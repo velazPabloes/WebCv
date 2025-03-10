@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PorfileImage from '../components/PorfileImage.astro';
+import CardBar from '../components/CardBar.astro';
+import Subtitle from '../components/Subtitle.astro';
+import IconImg from '../components/IconImg.astro';
+---
+<Layout title='About'>
+  <div class="h-full place-items-center row-start-3 row-span-7 gap-3">
+        <!--CONTENT CARD-->
+  <div class="w-3/4 grid grid-rows-subgrid  grid-cols-3 justify-center bg-white rounded-lg border-2 border-black gap-4">
+    <div class="row-start-1 row-span-1 col-start-1 col-span-3">
+      <CardBar/>
+    </div>
+    <div class="flex justify-start items-center row-start-2 row-span-1 col-start-1 col-span-2 px-8">
+      <Subtitle title='Pablo Velazquez'/>
+    </div>
+    <div class="flex flex-col justify-start items-center row-start-3 row-span-3 col-start-1 col-span-2 gap-4 pb-4 px-8">
+      <p class="text-start text-lg">
+        Soy un Estudiante de Ingenieria Informatica de 4ªcurso. Mis principales intereses son el Desarrollo Web, la IA y el Analasis de Datos, aunque estoy abierto a explorar cualquier ambito.
+      </p>
+      <p class="text-start text-lg">Actualmente estoy buscando un entorno idoneo para realizar las practicas y donde poder desarrollarme profesionalmente.
+      </p>
+      <p class="text-start text-lg">A parte de todas mis conocimientos, puedo ofrecer muchas de aprender y trabajar en equipo.
+      </p>
+    </div>
+    <div class="w-10/12 grid row-start-2 row-span-2 col-start-3 col-span-1 rounded-lg relative pt-8">
+      <div class="flex justify-center w-full h-auto items-start row-start-1 row-span-10 col-start-1 col-span-1 bottom-0 top-0">
+      <PorfileImage/>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--ARROW ICON-->
+  <div class="flex justify-center items-center row-start-11 row-span-1">
+    <IconImg linkRef='/', size="size-14", iconPath="../../public/icons/caret-up.svg", alt="arrowIcon"></IconImg>
+  </div>
+</Layout>

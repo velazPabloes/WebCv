@@ -1,0 +1,41 @@
+---
+import WindowContainer from './WindowContainer.astro';
+import IconImg from './IconImg.astro';
+import Subtitle from './Subtitle.astro';
+import NormalText from './NormalText.astro';
+import CardBar from './CardBar.astro';
+
+interface Props {
+	imgPath: string;
+  cardTitle: string;
+  cardParagraph: string[];
+}
+
+const { imgPath, cardTitle, cardParagraph } = Astro.props;
+---
+<div class="w-3/4 h-5/6 grid grid-rows-10 grid-cols-2 justify-center bg-white rounded-lg border-2 border-black">
+  <div class="row-start-1 row-span-1 col-start-1 col-span-2">
+    <CardBar/>
+  </div>
+  <div class="flex text-start justify-start row-start-3 row-span-1 col-start-1 col-span-1 px-6 py-2">
+    <Subtitle title={cardTitle}/>
+  </div>
+  <div class="flex flex-col justify-start items-start row-start-4 row-span-4 col-start-1 col-span-1 px-8 py-4">
+    <NormalText>
+      {cardParagraph.map(paragraph => (
+        <p class="text-start">{paragraph}</p>
+      ))}
+    </NormalText>
+  </div>
+  
+  <div class="w-11/12 grid grid-rows-10 grid-cols-1 row-start-3 row-span-6 col-start-2 col-span-1 bg-white rounded-lg border-2 border-black relative">
+    <div class="h-full row-start-1 row-span-1 col-start-1 col-span-1 absolute left-0 right-0">
+      <CardBar/>
+    </div>
+    <div class="flex justify-center w-full h-auto items-start row-start-1 row-span-10 col-start-1 col-span-1 bottom-0 top-0">
+      <div class="w-full h-full">
+        <img class='w-full h-full rounded-lg' src={imgPath}>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  linkRef: string;
+  size: string;
+  iconPath: string;
+}
+
+const {linkRef, size, iconPath} = Astro.props;
+---
+<a href= {linkRef}>
+  <svg class={size} >
+    <use href={iconPath} />
+  </svg>
+
+</a>

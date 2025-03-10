@@ -1,0 +1,35 @@
+---
+import WindowContainer from './WindowContainer.astro';
+import IconImg from './IconImg.astro';
+import Subtitle from './Subtitle.astro';
+import CardBar from './CardBar.astro';
+
+interface Props {
+	imgPath: string;
+  cardTitle: string;
+  cardRef: string;
+  widthCard?: string;
+  heightCard?: string;
+}
+
+const { imgPath, cardTitle, cardRef, widthCard='w-1/5 ', heightCard='h-full ' } = Astro.props;
+
+const classContainer = widthCard + heightCard + "grid grid-rows-10 bg-white rounded-lg border-2 border-black"
+---
+<div class={classContainer}>
+  <div class="row-start-1 row-span-1">
+    <CardBar/>
+  </div>
+  <div class="flex justify-center items-center row-start-3 row-span-3">
+    <IconImg linkRef= {cardRef} iconPath= {imgPath} size='size-24' alt= {cardTitle}/>
+  </div>
+  <div class="flex justify-center items-center row-start-6 row-span-1">
+    <Subtitle title={cardTitle}/>
+  </div>
+  <div class="flex justify-center items-center row-start-8 row-span-2"></div>
+  <div class="flex justify-center items-center row-start-10 row-span-1">
+    <IconImg linkRef='../pages/about.astro', size="size-14", iconPath="../../public/icons/caret-down.svg", alt="arrowIcon"></IconImg>
+  </div>
+</div>
+
+
