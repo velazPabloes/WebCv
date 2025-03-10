@@ -1,8 +1,5 @@
 ---
-import type { ImageMetadata } from 'astro'
-import NavBar from '../components/NavBar.astro'
-import PorfileImage from '../components/PorfileImage.astro'
-import IconImg from '../components/IconImg.astro'
+import NavBar from '../components/NavBar.astro';
 
 interface Props {
 	title: string;
@@ -53,7 +50,7 @@ const { title } = Astro.props;
 	html {
 		font-family: "Coming Soon", cursive;
 		background: #F6FF79;
-		text: black;
+		color: black;
 		box-sizing: border-box; /*To delete all the default margins a paddings*/
 		margin: 0;
 		padding: 0;
