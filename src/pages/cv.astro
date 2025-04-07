@@ -1,29 +1,38 @@
 ---
+/*COMPONENT IMPORTS*/
 import VerticalWindow from "../components/VerticalWindow.astro";
 import Layout from "../layouts/Layout2.astro";
 import Carrousel from "../components/VerticalCarousel.astro";
+
+/*IMAGE IMPORTS*/
+const projectsImg = '/img/projects.webp';
+const programmingImg = '/img/programming.webp';
+const languageImg = '/img/languages.webp';
+const educationImg = '/img/education.webp';
+
+/*ICON IMPORTS*/
 ---
 
 <Layout title="Cv" mainTittle="CV" >
   <Carrousel>
     <!-- Card 1 -->
     <div class="swiper-slide">
-      <VerticalWindow cardTitle="PROYECTOS" imgPath="../../public/img/projects.png" cardRef="/cvMenu/projects" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+      <VerticalWindow cardTitle="PROYECTOS" imgPath= {projectsImg} cardRef="/cvMenu/projects" widthCard="w-5/6 ", heightCard="h-5/6 "/>
     </div> 
     
     <!-- Card 2 -->
     <div class="swiper-slide">
-      <VerticalWindow cardTitle="PROGRAMACION" imgPath="../../public/img/programming.png" cardRef="/cvMenu/programmingSkills" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+      <VerticalWindow cardTitle="PROGRAMACION" imgPath= {programmingImg} cardRef="/cvMenu/programmingSkills" widthCard="w-5/6 ", heightCard="h-5/6 "/>
     </div> 
 
     <!-- Card 3 -->
     <div class="swiper-slide">
-      <VerticalWindow cardTitle="IDIOMAS" imgPath="../../public/img/languages.png" cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/>
+      <VerticalWindow cardTitle="IDIOMAS" imgPath= {languageImg} cardRef="#" widthCard="w-5/6 ", heightCard="h-5/6 "/>
     </div>  
 
     <!-- Card 4 -->
     <div class="swiper-slide">
-      <VerticalWindow cardTitle="EDUCACION" imgPath="../../../public/img/education.png" cardRef="/cvMenu/education" widthCard="w-5/6 ", heightCard="h-5/6 "/> 
+      <VerticalWindow cardTitle="EDUCACION" imgPath= {educationImg} cardRef="/cvMenu/education" widthCard="w-5/6 ", heightCard="h-5/6 "/> 
     </div> 
   </Carrousel>
 </Layout>

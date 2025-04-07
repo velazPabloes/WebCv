@@ -1,7 +1,15 @@
 ---
+/*COMPONENT IMPORTS*/
 import HorizontalWindow from "../../components/HorizontalWindow.astro";
 import Layout from "../../layouts/Layout2.astro";
 import Carrousel from "../../components/HorizontalCarrousel.astro";
+
+/*IMG IMPORTS*/
+const etsiiBuildingImg = '/img/etsiiBuilding.webp';
+const salesianosBuildingImg = '/img/etsiiBuilding.webp';
+const htwgKonstanzBuildingImg = '/img/htwgKonstanzBuilding.webp';
+
+/*ICON IMPORTS*/
 ---
 
 <Layout title="Educacion" mainTittle="EDUCACION" >
@@ -13,32 +21,39 @@ import Carrousel from "../../components/HorizontalCarrousel.astro";
         "-Grado Universitario",
         "-ETSII (Universidad de Sevilla)",
         "-2021 - Actualidad"
-      ]} imgPath="../../../public/img/etsii_building.jpg"/>  
+      ]} imgPath= {etsiiBuildingImg}/>  
+    </div> 
+
+    <!-- Card 2 -->
+    <div class="swiper-slide">
+      <HorizontalWindow cardTitle="Erasmus"   
+      cardParagraph={[
+        "-Grado Universitario",
+        "-HTWG Konstanz (Alemania)",
+        "-2023 - 2024"
+      ]} imgPath= {htwgKonstanzBuildingImg}/>  
     </div> 
     
-    <!-- Card 2 -->
+    <!-- Card 3 -->
     <div class="swiper-slide">
       <HorizontalWindow cardTitle="Ciencias de la Salud"   
       cardParagraph={[
         "-Bachillerato",
         "-Salesianos de Triana",
         "-2019 - 2021"
-      ]} imgPath="../../../public/img/salesianos_building.jpg"/>
+      ]} imgPath= {salesianosBuildingImg}/>
     </div> 
 
-    <!-- Card 3 -->
+    <!-- Card 4 -->
     <div class="swiper-slide">
       <HorizontalWindow cardTitle="Primaria y ESO"   
       cardParagraph={[
-        "-Educacion Obligatoria",
+        "-Educación Obligatoria",
         "-Salesianos de Triana",
         "-2011 - 2019"
-      ]} imgPath="../../../public/img/salesianos_building.jpg"/>   
+      ]} imgPath= {salesianosBuildingImg}/>   
     </div>  
   </Carrousel>
-
-
-
 </Layout>
 
 <style>

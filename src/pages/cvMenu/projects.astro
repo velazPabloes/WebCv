@@ -1,7 +1,18 @@
 ---
+/*COMPONENT IMPORTS*/
 import IconsHorizontalWindow from "../../components/IconsHorizontalWindow.astro";
 import Layout from "../../layouts/Layout2.astro";
 import Carrousel from "../../components/HorizontalCarrousel.astro";
+
+/*IMAGE IMPORTS*/
+const peluWebProjectImg = '/img/peluWebProject.webp';
+const dSoundProjectImg = '/img/3dSoundProject.webp';
+
+/*ICON IMPORTS*/
+const astroIcon = '/icons/astro.svg';
+const tailwindIcon = '/icons/tailwind.svg';
+const reactIcon = '/icons/react.svg';
+
 ---
 
 <Layout title="Projectos" mainTittle="PROJECTOS">
@@ -13,7 +24,7 @@ import Carrousel from "../../components/HorizontalCarrousel.astro";
         "Desarrollo Web",
         "Tienda online de una peluqueria",
         "Permite pedir citas al cliente"
-      ]} imgPath="../../../public/img/peluWebProject.png" linkButton1="https://github.com/velazPabloes" linkButton2="https://github.com/velazPabloes" iconLogo1="../../../public/icons/astro.svg" iconLogo2="../../../public/icons/react.svg" iconLogo3="../../../public/icons/tailwind.svg" linkLogo1="#" linkLogo2="#" linkLogo3="#"/>  
+      ]} imgPath= {peluWebProjectImg} linkButton1="https://github.com/velazPabloes" linkButton2="https://github.com/velazPabloes" iconLogo1= {astroIcon} iconLogo2= {reactIcon} iconLogo3= {tailwindIcon} linkLogo1="#" linkLogo2="#" linkLogo3="#"/>  
     </div> 
     
     <!-- Card 2 -->
@@ -23,7 +34,7 @@ import Carrousel from "../../components/HorizontalCarrousel.astro";
         "Desarrollo Web, IA, Analisis de Datos",
         "Visualizacion en 3d de los sonidos de una cancion",
         ""
-      ]} imgPath="../../../public/img/3dSoundProject.png" linkButton1="https://github.com/velazPabloes" linkButton2="https://github.com/velazPabloes" iconLogo1="../../../public/icons/astro.svg" iconLogo2="../../../public/icons/react.svg" iconLogo3="../../../public/icons/tailwind.svg" linkLogo1="#" linkLogo2="#" linkLogo3="#"/>
+      ]} imgPath= {dSoundProjectImg} linkButton1="https://github.com/velazPabloes" linkButton2="https://github.com/velazPabloes" iconLogo1= {astroIcon} iconLogo2= {reactIcon} iconLogo3= {tailwindIcon} linkLogo1="#" linkLogo2="#" linkLogo3="#"/>
     </div> 
   </Carrousel>
 </Layout>

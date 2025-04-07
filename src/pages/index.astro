@@ -1,16 +1,21 @@
 ---
+/*COMPONENTS*/
 import Layout from '../layouts/Layout.astro';
 import NetBar from '../components/NetBar.astro';
-import PorfileImage from '../components/PorfileImage.astro';
+import ProfileImage from '../components/PorfileImage.astro';
 import Title from '../components/Title.astro';
 import NormalText from '../components/NormalText.astro';
 import IconImg from '../components/IconImg.astro';
+
+/*ICONS*/
+
+/*IMG*/
 ---
 <Layout title="Mi Curriculum" >
   <!--PORFILE IMAGE-->
   <div class="grid justify-self-center row-start-2 row-span-4 rounded-lg relative">
     <div class="size-52 flex justify-center items-start bottom-0 top-0">
-    <PorfileImage/>
+    <ProfileImage/>
     </div>
   </div>
   
@@ -23,9 +28,9 @@ import IconImg from '../components/IconImg.astro';
     <!--PARAGRAPH-->
     <div class="flex justify-center items-center row-start-2 row-span-1 pt-40 sm:pt-40 3xl:pt-14">
     <NormalText>
-      Soy un estudiante de Ingenieria Informatica.<br/>
+      Soy un estudiante de Ingeniería Informática.<br/>
       Con muchas ganas de Aprender y Trabajar.<br/>
-      Desarrollo Web, Inteligencia Artificial y Analisis de Datos...
+      Desarrollo Web, Inteligencia Artificial y Análisis de Datos...
     </NormalText>
     </div>
     <!--NETBAR-->
@@ -36,7 +41,7 @@ import IconImg from '../components/IconImg.astro';
 
   <!--ARROW ICON-->
   <div class="flex justify-center items-center row-start-11 row-span-1 pt-1 sm:pt-0 sm:pb-4">
-    <IconImg linkRef='/about', size="size-14", iconPath="../../public/icons/caret-down.svg", alt="arrowIcon"></IconImg>
+    <IconImg linkRef='/about', size="size-14", iconPath="/public/icons/caret-down.svg", alt="arrowIcon"></IconImg>
   </div>
   
 </Layout>

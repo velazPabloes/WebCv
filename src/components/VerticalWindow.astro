@@ -1,8 +1,15 @@
 ---
+/*COMPONENT IMPORTS*/
 import IconImg from '../components/IconImg.astro';
 import Subtitle from '../components/Subtitle.astro';
 import CardBar from '../components/CardBar.astro';
 
+/*ICON IMPORTS*/
+const arrowDownIcon = '/icons/caret-down.svg';
+
+/*IMG IMPORTS*/
+
+/*COMPONENT PROPS*/
 interface Props {
 	imgPath: string;
   cardTitle: string;
@@ -16,18 +23,22 @@ const { imgPath, cardTitle, cardRef, widthCard='w-1/5 ', heightCard='h-full ' } 
 const classContainer = widthCard + heightCard + "grid grid-rows-10 bg-white rounded-lg border-2 border-black"
 ---
 <div class={classContainer}>
+  <!--CARD BAR-->
   <div class="row-start-1 row-span-1">
     <CardBar/>
   </div>
+  <!--CARD ICON-->
   <div class="flex justify-center items-center row-start-3 row-span-3">
     <IconImg linkRef= {cardRef} iconPath= {imgPath} size='size-24' alt= {cardTitle}/>
   </div>
+  <!--CARD TITLE-->
   <div class="flex justify-center items-center row-start-6 row-span-1">
     <Subtitle title={cardTitle}/>
   </div>
   <div class="flex justify-center items-center row-start-8 row-span-2"></div>
+  <!--CARD ARROW-->
   <div class="flex justify-center items-center row-start-10 row-span-1">
-    <IconImg linkRef='../pages/about.astro', size="size-14", iconPath="../../public/icons/caret-down.svg", alt="arrowIcon"></IconImg>
+    <IconImg linkRef= {cardRef} , size="size-14", iconPath= {arrowDownIcon}, alt="arrowIcon"></IconImg>
   </div>
 </div>
 
