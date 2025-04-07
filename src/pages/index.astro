@@ -7,9 +7,10 @@ import Title from '../components/Title.astro';
 import NormalText from '../components/NormalText.astro';
 import IconImg from '../components/IconImg.astro';
 
-/*ICONS*/
+/*ICON IMPORTS*/
+const arrowDownIcon = '/icons/caret-down.svg';
 
-/*IMG*/
+/*IMG IMPORTS*/
 ---
 <Layout title="Mi Curriculum" >
   <!--PORFILE IMAGE-->
@@ -41,7 +42,7 @@ import IconImg from '../components/IconImg.astro';
 
   <!--ARROW ICON-->
   <div class="flex justify-center items-center row-start-11 row-span-1 pt-1 sm:pt-0 sm:pb-4">
-    <IconImg linkRef='/about', size="size-14", iconPath="/public/icons/caret-down.svg", alt="arrowIcon"></IconImg>
+    <IconImg linkRef='/about', size="size-14", iconPath= {arrowDownIcon} , alt="arrowIcon"></IconImg>
   </div>
   
 </Layout>
