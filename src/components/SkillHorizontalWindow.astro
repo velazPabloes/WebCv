@@ -1,0 +1,82 @@
+---
+/*COMPONENT IMPORTS*/
+import IconImg from "./IconImg.astro";
+import NormalText from "./NormalText.astro";
+import Subtitle from "./Subtitle.astro";
+import CardBar from "./CardBar.astro";
+
+/*IMAGE IMPORTS*/
+
+
+/*ICON IMPORTS*/
+const eyeIcon = '/icons/eye.svg';
+const gitHubIcon = '/icons/git-hub.svg';
+
+interface Props {
+	imgPath: string;
+  cardTitle: string;
+  titleParagraphs: {[title: string]: string[]};
+  iconLogo1: string;
+  iconLogo2: string;
+  iconLogo3: string;
+  linkLogo1: string;
+  linkLogo2: string;
+  linkLogo3: string;
+}
+
+const { imgPath, cardTitle, titleParagraphs, iconLogo1, iconLogo2, iconLogo3, linkLogo1, linkLogo2, linkLogo3  } = Astro.props;
+---
+
+<div class="w-3/4 h-5/6 grid grid-rows-10 grid-cols-2 justify-center bg-white rounded-lg border-2 border-black">
+  <!--CARD BAR-->
+  <div class="row-start-1 row-span-1 col-start-1 col-span-2">
+    <CardBar/>
+  </div>
+
+  <!--CARD TITLE-->
+  <div class="flex text-start justify-start row-start-3 row-span-1 col-start-1 col-span-1 px-6 py-2">
+    <Subtitle title={cardTitle}/>
+  </div>
+
+  <!--TEXT CARD-->
+  <div class="flex flex-col justify-start items-start row-start-4 row-span-4 col-start-1 col-span-1 px-8 py-4">
+    {Object.entries(titleParagraphs).map(([title, paragraphs])=>(
+      <div class="font-bold">
+        <NormalText>{title}</NormalText>
+      </div> 
+      <NormalText>
+      {paragraphs.map(paragraph => (
+        <p class="text-start">{paragraph}</p>
+      ))}
+      </NormalText>   
+    ))}
+  </div>
+
+  <!--CARD IMAGE-->
+  <div class="w-6/12 flex justify-self-center justify-end self-center row-start-2 row-span-4 col-start-2 col-span-1 relative border-2 border-black">
+    <!--IMAGE-->
+    <div class="flex justify-end items-center">
+      <div class="w-full h-full">
+        <img class='size-24' src={imgPath}>
+      </div>
+    </div>    
+  </div>  
+
+  <!--ICONS-->
+  <div class="flex justify-center items-center row-start-7 row-span-1 col-start-2 col-span-1 pr-4 py-6 gap-4 border-2 border-black">
+    <!--ICON 1-->
+    <div class="flex items-stretch gap-4">
+      <IconImg linkRef= {linkLogo1} iconPath= {iconLogo1} size='size-8' alt='Icon'/>
+    </div>
+    
+    <!--ICON 2-->
+    <div class="flex items-stretch gap-4">
+      <IconImg linkRef= {linkLogo2} iconPath= {iconLogo2} size='size-8' alt='Icon'/>
+    </div>
+
+    <!--ICON 3-->
+    <div class="flex items-stretch gap-4">
+      <IconImg linkRef= {linkLogo3} iconPath= {iconLogo3} size='size-8' alt='Icon'/>
+    </div>
+  </div>
+</div>

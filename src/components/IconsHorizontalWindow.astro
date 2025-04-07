@@ -1,8 +1,16 @@
 ---
-import IconImg from '../components/IconImg.astro';
-import Subtitle from '../components/Subtitle.astro';
-import NormalText from '../components/NormalText.astro';
-import CardBar from '../components/CardBar.astro';
+/*COMPONENT IMPORTS*/
+import IconImg from "./IconImg.astro";
+import NormalText from "./NormalText.astro";
+import Subtitle from "./Subtitle.astro";
+import CardBar from "./CardBar.astro";
+
+/*IMAGE IMPORTS*/
+
+
+/*ICON IMPORTS*/
+const eyeIcon = '/icons/eye.svg';
+const gitHubIcon = '/icons/git-hub.svg';
 
 interface Props {
 	imgPath: string;
@@ -22,15 +30,20 @@ interface Props {
   linkLogo3: string;
 }
 
-const { imgPath, cardTitle, cardParagraph, iconButton1 = '../../public/icons/git-hub.svg', iconButton2 = '../../public/icons/eye.svg', linkButton1, linkButton2, textButton1 = 'Codigo', textButton2 = 'Preview', iconLogo1, iconLogo2, iconLogo3, linkLogo1, linkLogo2, linkLogo3  } = Astro.props;
+const { imgPath, cardTitle, cardParagraph, iconButton1 = '/icons/git-hub.svg', iconButton2 = '/icons/eye.svg', linkButton1, linkButton2, textButton1 = 'Codigo', textButton2 = 'Preview', iconLogo1, iconLogo2, iconLogo3, linkLogo1, linkLogo2, linkLogo3  } = Astro.props;
 ---
 <div class="w-3/4 h-5/6 grid grid-rows-10 grid-cols-2 justify-center bg-white rounded-lg border-2 border-black">
+  <!--CARD BAR-->
   <div class="row-start-1 row-span-1 col-start-1 col-span-2">
     <CardBar/>
   </div>
+
+  <!--CARD TITLE-->
   <div class="flex text-start justify-start row-start-3 row-span-1 col-start-1 col-span-1 px-6 py-2">
     <Subtitle title={cardTitle}/>
   </div>
+
+  <!--TEXT CARD-->
   <div class="flex flex-col justify-start items-start row-start-4 row-span-4 col-start-1 col-span-1 px-8 py-4">
     <NormalText>
       {cardParagraph.map(paragraph => (
@@ -38,46 +51,56 @@ const { imgPath, cardTitle, cardParagraph, iconButton1 = '../../public/icons/git
       ))}
     </NormalText>
   </div>
+
+  <!--BUTTONS-->
   <div class="flex justify-start items-center row-start-9 row-span-1  col-start-1 col-span-1 px-8 gap-4">
+    <!--BUTTON 1-->
     <button onclick={`window.open('${linkButton1}', '_blank');`} class="flex items-stretch gap-4 bg-black hover:bg-gray-900 text-white font-semibold py-1 px-4 rounded-md border-gray-400  shadow">
       <div class="flex justify-center items-center">
-        <IconImg linkRef= {linkButton1} iconPath= {iconButton1} size='size-5' alt='gitHub'/>
-        
+        <IconImg iconPath={iconButton1} linkRef={linkButton1} size="size-5" alt="gitHub"/>
       </div>
       <span class="flex items-center text-end text-sm">{textButton1}</span>
     </button>
+
+    <!--BUTTON 2-->
     <button onclick={`window.open('${linkButton2}', '_blank');`} class="flex items-stretch gap-4 bg-black hover:bg-gray-900 text-white font-semibold py-1 px-4 rounded-md border-gray-400  shadow">
       <div class="flex justify-center items-center">
-        <IconImg linkRef= {linkButton2} iconPath= {iconButton2} size='size-5' alt='gitHub'/>
-        
+        <IconImg iconPath={iconButton2} linkRef={linkButton2} size="size-5" alt="gitHub"/>
       </div>
       <span class="flex items-center text-end text-sm">{textButton2}</span>
     </button>
   </div>
 
+  <!--ICONS-->
   <div class="flex justify-center items-center row-start-9 row-span-1 col-start-2 col-span-2 pr-4 py-6 gap-4 ">
+    <!--ICON 1-->
     <div class="flex items-stretch gap-4">
       <IconImg linkRef= {linkLogo1} iconPath= {iconLogo1} size='size-8' alt='Icon'/>
     </div>
-
+    
+    <!--ICON 2-->
     <div class="flex items-stretch gap-4">
       <IconImg linkRef= {linkLogo2} iconPath= {iconLogo2} size='size-8' alt='Icon'/>
     </div>
 
+    <!--ICON 3-->
     <div class="flex items-stretch gap-4">
       <IconImg linkRef= {linkLogo3} iconPath= {iconLogo3} size='size-8' alt='Icon'/>
     </div>
   </div>
 
-
+  <!--CARD IMAGE-->
   <div class="w-11/12 grid grid-rows-10 grid-cols-1 row-start-3 row-span-6 col-start-2 col-span-1 bg-white rounded-lg border-2 border-black relative">
+    <!--IMAGE BAR-->
     <div class="h-full row-start-1 row-span-1 col-start-1 col-span-1 absolute left-0 right-0">
       <CardBar/>
     </div>
+
+    <!--IMAGE-->
     <div class="flex justify-center w-full h-auto items-start row-start-1 row-span-10 col-start-1 col-span-1 bottom-0 top-0">
       <div class="w-full h-full">
         <img class='w-full h-full rounded-lg' src={imgPath}>
       </div>
-    </div>
-  </div>
+    </div>    
+  </div>  
 </div>

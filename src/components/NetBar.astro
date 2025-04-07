@@ -1,9 +1,17 @@
 ---
+/*COMPONENT IMPORTS*/
 import IconImg from '../components/IconImg.astro'
+
+/*IMAGE IMPORTS*/
+
+/*ICON IMPORTS*/
+const gmailIcon = '/icons/gmail.svg';
+const gitIcon = '/icons/git.svg';
+const linkedinIcon = '/icons/linkedin.svg';
 ---
 
 <nav class="flex items-center justify-center space-x-4">
-    <IconImg linkRef='mailto:velazquezpabloes03@gmail.com' size='size-8' iconPath= '../../public/icons/gmail.svg' alt='gmailIcon' targetLink='_blank'/> 
-    <IconImg linkRef='https://github.com/velazPabloes' size='size-8' iconPath='../../public/icons/git.svg' alt="gitIcon" targetLink='_blank'/> 
-    <IconImg linkRef='https://linkedin.com/in/pablo-velázquez-74856134a' size='size-8' iconPath='../../public/icons/linkedin.svg' alt='linkedinIcon' targetLink='_blank'/> 
+    <IconImg linkRef='mailto:velazquezpabloes03@gmail.com' size='size-8' iconPath= {gmailIcon} alt='gmailIcon' targetLink='_blank'/> 
+    <IconImg linkRef='https://github.com/velazPabloes' size='size-8' iconPath= {gitIcon} alt="gitIcon" targetLink='_blank'/> 
+    <IconImg linkRef='https://linkedin.com/in/pablo-velázquez-74856134a' size='size-8' iconPath= {linkedinIcon} alt='linkedinIcon' targetLink='_blank'/> 
 </nav>
